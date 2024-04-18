@@ -1,6 +1,4 @@
 import 'dart:ui';
-
-import 'package:blurrycontainer/blurrycontainer.dart';
 import 'package:flutter/material.dart';
 import '../../model/model.dart';
 import '../../model/objects/cards.dart';
