@@ -110,7 +110,7 @@ class _RisultatiRicercaState extends State<RisultatiRicerca> {
       body: Container(
         decoration: const BoxDecoration(
         image: DecorationImage(
-        image: AssetImage('assets/images/background.jpg'),
+        image: AssetImage('assets/images/home.jpg'),
         fit: BoxFit.cover,
         opacity: 0.9,
         ),

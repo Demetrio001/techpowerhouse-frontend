@@ -1,9 +1,9 @@
-
 import 'package:flutter/material.dart';
 import 'package:techpowerhouse/UI/pages/registrazione.dart';
 import 'package:techpowerhouse/UI/pages/ricerca_avanzata.dart';
 import 'package:techpowerhouse/model/supports/constants.dart';
 
+import '../widgets/menu.dart';
 import 'carrello.dart';
 import 'home.dart';
 import 'login.dart';
@@ -29,73 +29,20 @@ class _LayoutState extends State<Layout> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade600,
       appBar: AppBar(
-        backgroundColor: Colors.grey.shade600,
-        title: const Text(
-          Constants.appName,
-          style: TextStyle(
-            color: Colors.black,
-            fontWeight: FontWeight.w900,
-            fontSize: 50,
-          ),
+        backgroundColor: Colors.grey.shade800,
+        leading: PopupMenuWidget(
+          onMenuItemSelected: (String value) {
+            _handlePopupMenuSelection(value);
+          },
+        ),
+        title: Image.asset(
+          'images/logo.png',
+          width: 70, // Larghezza desiderata dell'immagine
+          height: 70, // Altezza desiderata dell'immagine
+          fit: BoxFit.contain, // Adatta l'immagine al widget
         ),
         centerTitle: true,
-      ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            DrawerHeader(
-              decoration: BoxDecoration(
-                color: Colors.grey.shade600,
-              ),
-              child: Text(
-                'Menu',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
-                ),
-              ),
-            ),
-            ListTile(
-              title: Text('Home'),
-              onTap: () {
-                _selectPage(0);
-                Navigator.pop(context); // Chiudi il Drawer dopo la selezione
-              },
-            ),
-            ListTile(
-              title: Text('Ricerca avanzata'),
-              onTap: () {
-                _selectPage(1);
-                Navigator.pop(context); // Chiudi il Drawer dopo la selezione
-              },
-            ),
-            ListTile(
-              title: Text('Login'),
-              onTap: () {
-                _selectPage(2);
-                Navigator.pop(context); // Chiudi il Drawer dopo la selezione
-              },
-            ),
-            ListTile(
-              title: Text('Registrati'),
-              onTap: () {
-                _selectPage(3);
-                Navigator.pop(context); // Chiudi il Drawer dopo la selezione
-              },
-            ),
-            ListTile(
-              title: Text('Carrello'),
-              onTap: () {
-                _selectPage(4);
-                Navigator.pop(context); // Chiudi il Drawer dopo la selezione
-              },
-            ),
-          ],
-        ),
       ),
       body: _pages[_selectedIndex],
     );
@@ -106,5 +53,24 @@ class _LayoutState extends State<Layout> {
       _selectedIndex = index;
     });
   }
-}
 
+  void _handlePopupMenuSelection(String value) {
+    switch (value) {
+      case 'home':
+        _selectPage(0);
+        break;
+      case 'login':
+        _selectPage(2);
+        break;
+      case 'register':
+        _selectPage(3);
+        break;
+      case 'cart':
+        _selectPage(4);
+        break;
+      case 'search':
+        _selectPage(1);
+        break;
+    }
+  }
+}

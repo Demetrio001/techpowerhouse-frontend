@@ -13,12 +13,13 @@ class BoxCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(10), // Bordi del ClipRRect
+        //borderRadius: BorderRadius.circular(10),
         child: BackdropFilter(
-          filter: ImageFilter.blur(sigmaX: 20, sigmaY: 20),
+          filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.85), // Colore di sfondo con opacità
+              color: Colors.black.withOpacity(0.70),
+
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -26,7 +27,7 @@ class BoxCard extends StatelessWidget {
                 Text(
                   c.name,
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.white70,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
@@ -47,15 +48,15 @@ class BoxCard extends StatelessWidget {
                     children: [
                       Text(
                         'Produttore: ${c.publisher}',
-                        style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Colors.white70,fontSize: 15,fontWeight: FontWeight.bold),
                       ),
                       Text(
                         'Quantità: ${c.quantity}',
-                        style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.bold),
+                        style: TextStyle(color: Colors.white70,fontSize: 15,fontWeight: FontWeight.bold),
                       ),
                       Text(
-                        'Prezzo: ${c.price}',
-                        style: TextStyle(color: Colors.black,fontSize: 15,fontWeight: FontWeight.bold),
+                        'Prezzo: ${c.price}€',
+                        style: TextStyle(color: Colors.white70,fontSize: 15,fontWeight: FontWeight.bold),
                       ),
                       SizedBox(height: 8),
                       Row(

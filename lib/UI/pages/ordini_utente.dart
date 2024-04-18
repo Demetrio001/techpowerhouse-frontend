@@ -46,13 +46,13 @@ class _OrdiniUtenteState extends State<OrdiniUtente> {
           ),
         ),
         centerTitle: true,
-        backgroundColor: Colors.grey.shade600,
+        backgroundColor: Colors.grey.shade800,
       ),
       body:
     Container(
     decoration: const BoxDecoration(
     image: DecorationImage(
-    image: AssetImage('assets/images/backgroup.jpg'),
+    image: AssetImage('assets/images/carrello.jpg'),
     fit: BoxFit.cover,
     opacity: 0.9,
     ),
@@ -66,7 +66,7 @@ class _OrdiniUtenteState extends State<OrdiniUtente> {
         itemBuilder: (context, index) {
           final order = orders[index];
           return Card(
-            color: Colors.grey.shade600,
+            color: Colors.grey.shade800,
             margin: const EdgeInsets.all(4.0),
             child: ListTile(
               title: Text('ID Ordine: ${order.id}',style: TextStyle(color:Colors.black, fontSize: 20, fontWeight: FontWeight.bold) ),

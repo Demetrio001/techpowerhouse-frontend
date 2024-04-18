@@ -77,7 +77,7 @@ class _CarrelloState extends State<Carrello> {
     if (isLogged) {
       return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.grey.shade600,
+          backgroundColor: Colors.grey.shade800,
           toolbarHeight: 80.0,
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,7 +100,7 @@ class _CarrelloState extends State<Carrello> {
           Container(
             decoration: const BoxDecoration(
              image: DecorationImage(
-             image: AssetImage('assets/images/background.jpg'),
+             image: AssetImage('assets/images/carrello.jpg'),
             fit: BoxFit.cover,
               opacity: 0.9,
                ),
@@ -117,7 +117,7 @@ class _CarrelloState extends State<Carrello> {
           itemBuilder: (context, index) {
             final item = cartDetails[index];
             return Card(
-              color: Colors.grey.shade600,
+              color: Colors.grey.shade800,
               borderOnForeground: true,
               margin: const EdgeInsets.all(5.0),
               child: ListTile(
@@ -151,7 +151,7 @@ class _CarrelloState extends State<Carrello> {
                         Row(
                           children: [
                             IconButton(
-                              icon: const Icon(Icons.remove),
+                              icon: const Icon(Icons.remove, color:Colors.black),
                               onPressed: () async {
                                 if (item.quantity == 1) {
                                   try {
@@ -177,10 +177,11 @@ class _CarrelloState extends State<Carrello> {
                               },
                             ),
                             Container(
-                                color: Colors.grey.shade600,
-                                child: Text("${item.quantity}")),
+                                color: Colors.grey.shade800,
+                                child: Text("${item.quantity}",style: TextStyle(fontWeight: FontWeight.bold))),
                             IconButton(
-                              icon: const Icon(Icons.add),
+                              icon: const Icon(Icons.add, color:Colors.black),
+
                               onPressed: () async {
                                 int quantity = item.quantity + 1;
                                 try {
@@ -206,7 +207,7 @@ class _CarrelloState extends State<Carrello> {
           },
         ),),
         bottomNavigationBar: BottomAppBar(
-          color: Colors.grey.shade600,
+          color:Colors.grey.shade800,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
@@ -238,7 +239,7 @@ class _CarrelloState extends State<Carrello> {
               ),
               Text(
                 'Importo totale: ${calculateTotalPrice().toStringAsFixed(2)}€',
-                style: const TextStyle(fontSize: 18),
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black),
               ),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
@@ -283,7 +284,7 @@ class _CarrelloState extends State<Carrello> {
         body: Container(
           decoration: const BoxDecoration(
           image: DecorationImage(
-          image: AssetImage('assets/images/background.jpg'),
+          image: AssetImage('assets/images/carrello.jpg'),
     fit: BoxFit.cover,
     opacity: 0.9,
     ),),
