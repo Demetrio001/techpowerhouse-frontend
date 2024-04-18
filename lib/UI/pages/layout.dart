@@ -37,7 +37,7 @@ class _LayoutState extends State<Layout> {
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.w900,
-            fontSize: 65,
+            fontSize: 50,
           ),
         ),
         centerTitle: true,

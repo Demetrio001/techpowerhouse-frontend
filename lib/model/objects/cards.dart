@@ -6,6 +6,7 @@ class Cards {
   final String category;
   final double price;
   final int quantity;
+  final String urlImmagine;
 
   Cards({
     required this.id,
@@ -15,6 +16,7 @@ class Cards {
     required this.category,
     required this.price,
     required this.quantity,
+    required this.urlImmagine,
   });
 
   factory Cards.fromJson(Map<String, dynamic> json) {
@@ -26,6 +28,7 @@ class Cards {
       category: json['category'],
       price: json['price'].toDouble(),
       quantity: json['quantity'],
+      urlImmagine: json['urlImmagine'],
     );
   }
 
@@ -38,6 +41,7 @@ class Cards {
       'category': category,
       'price': price,
       'quantity': quantity,
+      'urlImmagine': urlImmagine,
     };
   }
 }

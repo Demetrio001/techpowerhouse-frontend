@@ -133,7 +133,7 @@ class Model {
   }
 
   Future<List<Cards>> getCardsByTitle(String title, {int pageNumber = 0, int pageSize = 10, String sortBy = 'id'}) async {
-    final Uri uri = Uri.parse('${Constants.addressStoreServer}/cards/title?title=$title&pageNumber=$pageNumber&pageSize=$pageSize&sortBy=$sortBy');
+    final Uri uri = Uri.parse('${Constants.addressStoreServer}/cards/name?name=$title&pageNumber=$pageNumber&pageSize=$pageSize&sortBy=$sortBy');
     try {
       final response = await http.get(uri);
       if (response.statusCode == 200) {
