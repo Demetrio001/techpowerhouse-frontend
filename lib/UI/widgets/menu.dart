@@ -52,7 +52,7 @@ class PopupMenuWidget extends StatelessWidget {
       icon: const Icon(
         Icons.computer,
         color: Colors.green,
-      ), // Icona della casetta
+      ),
     );
   }
 }

@@ -71,7 +71,7 @@ class Registrazione extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      const SizedBox(height: 20), // Aggiunto spazio tra l'icona e i TextField
+                      const SizedBox(height: 20),
                       SizedBox(
                         width: 325,
                         child: TextField(
@@ -215,7 +215,6 @@ class Registrazione extends StatelessWidget {
               'images/logo.png',
               width: 125,
               height: 125,
-              // Puoi regolare la larghezza e l'altezza come preferisci
             ),
           ),
         ],

@@ -94,8 +94,8 @@ class _LoginState extends State<Login> {
                       children: [
                         const Icon(
                           Icons.person,
-                          size: 80, // Dimensione dell'icona desiderata
-                          color: Colors.green, // Colore dell'icona verde
+                          size: 80,
+                          color: Colors.green,
                         ),
                         const Padding(padding: EdgeInsets.only(top: 15)),
                         const Text(

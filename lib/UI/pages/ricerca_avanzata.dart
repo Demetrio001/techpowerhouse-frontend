@@ -34,7 +34,7 @@ class _RicercaAvanzataState extends State<RicercaAvanzata> {
               child: Container(
                 width: 450,
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.5), // Colore scuro per il contenitore interno
+                  color: Colors.black.withOpacity(0.5),
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
                 padding: const EdgeInsets.all(8),
@@ -45,8 +45,8 @@ class _RicercaAvanzataState extends State<RicercaAvanzata> {
                     children: [
                       const Icon(
                         Icons.search,
-                        size: 80, // Dimensione dell'icona desiderata
-                        color: Colors.green, // Colore dell'icona verde
+                        size: 80,
+                        color: Colors.green,
                       ),
                       const Padding(
                         padding: EdgeInsets.only(top: 35),
@@ -199,7 +199,6 @@ class _RicercaAvanzataState extends State<RicercaAvanzata> {
               'images/logo.png',
               width: 125,
               height: 125,
-              // Puoi regolare la larghezza e l'altezza come preferisci
             ),
           ),
         ],

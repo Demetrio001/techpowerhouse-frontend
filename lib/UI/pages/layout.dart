@@ -38,9 +38,9 @@ class _LayoutState extends State<Layout> {
         ),
         title: Image.asset(
           'images/logo.png',
-          width: 70, // Larghezza desiderata dell'immagine
-          height: 70, // Altezza desiderata dell'immagine
-          fit: BoxFit.contain, // Adatta l'immagine al widget
+          width: 70,
+          height: 70,
+          fit: BoxFit.contain,
         ),
         centerTitle: true,
       ),
