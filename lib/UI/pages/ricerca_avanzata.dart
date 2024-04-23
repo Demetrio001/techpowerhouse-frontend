@@ -34,7 +34,7 @@ class _RicercaAvanzataState extends State<RicercaAvanzata> {
               child: Container(
                 width: 450,
                 decoration: BoxDecoration(
-                  color: Colors.black.withOpacity(0.5),
+                  color: Colors.black.withOpacity(0.8),
                   borderRadius: BorderRadius.all(Radius.circular(20)),
                 ),
                 padding: const EdgeInsets.all(8),

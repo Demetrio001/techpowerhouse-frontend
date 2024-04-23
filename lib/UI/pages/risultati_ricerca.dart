@@ -96,13 +96,13 @@ class _RisultatiRicercaState extends State<RisultatiRicerca> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.grey.shade600,
+        backgroundColor: Colors.grey.shade800,
         title: const Text(
           'Risultati Ricerca',
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
-            fontSize: 50,
+            fontSize: 40,
           ),
         ),
         centerTitle: true,

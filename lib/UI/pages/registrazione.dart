@@ -42,7 +42,7 @@ class Registrazione extends StatelessWidget {
                 child: Container(
                   width: 450,
                   decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.5),
+                    color: Colors.black.withOpacity(0.8),
                     borderRadius: const BorderRadius.all(Radius.circular(20)),
                   ),
                   padding: const EdgeInsets.all(8),

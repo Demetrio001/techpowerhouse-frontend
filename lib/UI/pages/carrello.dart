@@ -207,7 +207,7 @@ class _CarrelloState extends State<Carrello> {
           },
         ),),
         bottomNavigationBar: BottomAppBar(
-          color:Colors.grey.shade800,
+          color:Colors.green.shade800,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [

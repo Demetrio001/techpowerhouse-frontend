@@ -86,7 +86,7 @@ class _LoginState extends State<Login> {
                     width: 550,
                     height: 550,
                     decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.5),
+                      color: Colors.black.withOpacity(0.8),
                       borderRadius: const BorderRadius.all(Radius.circular(20)),
                     ),
                     child: Column(
